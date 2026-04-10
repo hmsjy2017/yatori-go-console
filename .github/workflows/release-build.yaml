@@ -37,25 +37,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-22.04
-            arch: amd64
-            goos: linux
-          - os: ubuntu-22.04
-            arch: arm64
-            goos: linux
           - os: windows-latest
-            arch: amd64
-            goos: windows
-          - os: macos-15
-            arch: amd64
-            goos: darwin
-          - os: macos-15
             arch: arm64
-            goos: darwin
-          # 如果需要 armv7 (32位) 交叉编译，加下面一行
-          # - os: ubuntu-latest
-          #   arch: arm
-          #   goos: linux
+            goos: windows
 
     steps:
       - name: Checkout code
