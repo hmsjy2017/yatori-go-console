@@ -9,7 +9,7 @@ on:
       tag_name:
         description: 'Tag name for the release'
         required: true
-        default: 'v2.6.2-Beta.8'
+        default: 'v2.6.2-Beta.13'
 
 permissions:
   contents: write
@@ -22,14 +22,13 @@ env:
   VERSION: ${{ github.event.inputs.tag_name || github.ref_name }}
   RELEASE_DIR: release
   RELEASE_NOTICES: |
-    - [👏] 优化学习通题目截取，提高答题正确率
-
+    - [‍👏] 更新之前用户pr过来的分支以及同步了一下最新AI接口
     
-    学习通用户注意：
-        如果学习通课程中有前置任务点完成才能解锁后续任务的不能使用多任务点模式！！！（多任务点模式会失效）
+    
+    xxt用户注意：
+        如果xxt课程中有前置任务点完成才能解锁后续任务的不能使用多任务点模式！！！（多任务点模式会失效）
         每天学习累计学时不要太久，超过1200分钟可能会打回学习进度（尤其是多课程或多任务点模式），请自行把控好。因为太离谱了。
-    
-    注：智慧职教刚上线，可能并不稳定，若有bug可发送issue或者加群反馈。（智慧职教仅支持Windows系统）
+
 jobs:
   build:
     name: Build (${{ matrix.os }}-${{ matrix.arch }})
